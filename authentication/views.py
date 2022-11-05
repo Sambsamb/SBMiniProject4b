@@ -24,7 +24,8 @@ def login_page(request):
             )
             if user is not None:
                 login(request, user)
-                message = f'Hello {user.username}! You have been logged in'
+                # message = f'Hello {user.username}! You have been logged in'
+                return redirect('home')
             else:
                 message = 'Login failed!'
     return render(
