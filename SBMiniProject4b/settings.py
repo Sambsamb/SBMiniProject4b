@@ -134,3 +134,6 @@ LOGIN_URL = 'login'  # The name of our login view
 
 LOGIN_REDIRECT_URL = 'home'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR.joinpath('media/')
+
