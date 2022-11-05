@@ -56,7 +56,10 @@ ROOT_URLCONF = 'SBMiniProject4b.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [
+            # BASE_DIR / 'templates',
+            BASE_DIR.joinpath('templates'),
+        ]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
