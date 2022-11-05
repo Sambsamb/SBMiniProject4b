@@ -130,5 +130,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'authentication.User'
 
-LOGIN_URL = 'login'
+LOGIN_URL = 'login'  # The name of our login view
 
