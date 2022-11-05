@@ -28,10 +28,11 @@ import blog.views
 # ]
 
 urlpatterns = [
-   path('', LoginView.as_view(
-           template_name='authentication/login.html',
-           redirect_authenticated_user=True),
+    path('', LoginView.as_view(
+        template_name='authentication/login.html',
+        redirect_authenticated_user=True),
         name='login'),
-   path('logout/', authentication.views.logout_user, name='logout'),
+    path('logout/', authentication.views.logout_user, name='logout'),
+    path('home/', blog.views.home, name='home'),
 ]
 
