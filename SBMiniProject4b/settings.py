@@ -132,3 +132,5 @@ AUTH_USER_MODEL = 'authentication.User'
 
 LOGIN_URL = 'login'  # The name of our login view
 
+LOGIN_REDIRECT_URL = 'home'
+
