@@ -9,6 +9,8 @@ FHSU - Fall 2022
 # authentication/forms.py
 
 from django import forms
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm
 
 
 class LoginForm(forms.Form):
@@ -18,5 +20,8 @@ class LoginForm(forms.Form):
     # by rendering an HTML <input> with type=”password”.
 
 
-
+class SignupForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        model = get_user_model()
+        fields = ('username', 'email', 'first_name', 'last_name', 'role')
 
